@@ -1,0 +1,29 @@
+
+extends ../layout
+
+block content
+    div.container
+        div.row.clearfix
+            div.col-md-12.column
+            table.table.table-bordered.table-hover
+                thead
+                    tr
+                        th 编号
+                        th 名称
+                        th 手机
+                        th 地址
+                        th 性别
+                        th 描述
+                        th 操作
+                tbody.table-striped
+                each d in userData
+                    tr
+                        td #{d['user_id']}
+                        td #{d['user_name']}
+                        td #{d['user_phone']}
+                        td #{d['user_address']}
+                        td #{d['user_sex']}
+                        td #{d['t_desc']}
+                        td <a href="javascript:;" onclick='edit(this);' data-id="#{d['dept_id']}">修改</a>
+
+    script(src="/javascripts/user/user.js")                        

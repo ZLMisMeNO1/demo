@@ -1,0 +1,28 @@
+extends ../layout.jade
+block content
+    div.container
+        div.row.clearfix
+            div.col-md-12.column
+                form(action="", method="post",role="form")
+                    div.form-group
+                        label(for="user_id") 编号
+                        input(type="text" value="#{user.user_id}" class="form-control"  id="user_id")
+                    div.form-group
+                        label(for="user_name") 姓名
+                        input(type="text" value="#{user.user_name}" class="form-control"  id="user_name")
+                    div.form-group
+                        label(for="user_phone") 联系方式
+                        input(type="text" value="#{user.user_phone}"  class="form-control" id="user_phone")
+                    div.form-group
+                        label(for="user_address") 住址
+                        input(type="text" value="#{user.user_address}" class="form-control"  id="user_address")
+                    div.form-group
+                        label(for="user_sex") 性别
+                        input(type="text" value="#{user.user_sex}"  class="form-control" id="user_sex")
+                    div.form-group
+                        label(for="dept_id") 部门
+                        input(type="text" value="#{user.dept_id}" class="form-control"  id="dept_id")
+                    div.form-group
+                        label(for="t_desc") 描述
+                        input(type="text" value="#{user.t_desc}"  class="form-control" id="t_desc")
+                    button.btn.btn-success(type="submit") 提交
